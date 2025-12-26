@@ -478,6 +478,7 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
+          "AT后端": "https://sub-converter.crowsong.xyz",
           "肥羊增强型后端【vless reality+anytls】": "https://api.v1.mk",
           "肥羊备用后端【vless reality+anytls】": "https://url.v1.mk",
         },
@@ -489,6 +490,14 @@ export default {
           {
             label: "通用",
             options: [
+              {
+                label: "AT-FULL-NOAUTO",
+                value: "https://raw.githubusercontent.com/ArchmageTony/ACL4SSR/refs/heads/master/Clash/config/AT_ACL4SSR_Online_Full_NoAuto.ini"
+              },
+              {
+                label: "AT-FULL-AUTO",
+                value: "https://raw.githubusercontent.com/ArchmageTony/ACL4SSR/master/Clash/config/AT_ACL4SSR_Online_Full.ini"
+              },
               {
                 label: "默认",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
@@ -1126,7 +1135,7 @@ export default {
           "&scv=" +
           this.form.scv.toString() +
           "&fdn=" +
-          this.form.fdn.toString();    
+          this.form.fdn.toString();
       if (this.form.clientType.includes("surge")) {
         if (this.form.tpl.surge.doh === true) {
           this.customSubUrl += "&surge.doh=true";
